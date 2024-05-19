@@ -8,6 +8,9 @@ At the same time I saw a video on **youtube** from someone who host it's own **i
 
 Let's do it!!
 
+
+![Kiwix.org](images/kiwix.jpg)
+
 ## Kiwix and zim files
 
 In the video the creator talked about [Kiwix](https://kiwix.org/en/) and zim files. There are some pages I wanted to be accessible offline when the **internet** is down.
@@ -36,13 +39,21 @@ But that's not the end of my wish list of **offline** **web pages**. Here's a li
 The downside is they are not accessible through kiwix.
 But not all hope is lost. I remember a tool from years ago which I used briefly then, it's called [SiteSucker](https://sitesucker.en.softonic.com/mac?ex=RAMP-2046.0).
 
+
+
 ## Download sites through SiteSucker
+
+![SiteSucker](images/sitesucker.jpg)
 
 It's very easy to download **websites** with **SiteSucker**. Just enter the URL and set the depth and go. The depth is important as it follows links and scrape more content. I usually set it on 4 and this give me the best result.
 
 It can take a while to download a 'complete' **website**. I quote 'complete' because you never know when you downloaded the full **website**. As I said earlier I use 4 as depth because this download everything I need without other stuff on other **websites** which were linked on the **website** you downloaded.
 
+
+
 ## MSX.org
+
+![MSX](images/msx.jpg)
 
 This website gives me a though time, because the way it's coded. First I needed to replace some URLs from **https://msx.org** and **https://www.msx.org** to something that's local on my server like **http://my-server-ip:8888**.
 
