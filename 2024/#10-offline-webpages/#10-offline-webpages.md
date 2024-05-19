@@ -2,7 +2,7 @@
 
 ## Preface
 
-So a couple of weeks ago my **internet** went down, it was something on the **provider's** end. And when the **internet** goes down there's no more coding that I can do. I'm the kind of developer who's always looking up stuff, and for lloking up things I need the **internet**.
+So a couple of weeks ago my **internet** went down, it was something on the **provider's** end. And when the **internet** goes down there's no more coding that I can do. I'm the kind of developer who's always looking up stuff, and for looking up things I need the **internet**.
 
 At the same time I saw a video on **youtube** from someone who host it's own **internet** pages like **wikipedia** and many more. This got me thinking, I got a **server** which I can use for it.
 
@@ -18,6 +18,9 @@ In the video the creator talked about [Kiwix](https://kiwix.org/en/) and zim fil
 - ask Different
 
 These are the most important for me that are accessible with Kiwix. 
+But to this moment of writing this **blog post** I didn't installed of downloaded anything related to Kiwix and zim files.
+
+This will be next on the ToDo list ;-)
 
 ## Other resources
 
@@ -41,7 +44,7 @@ It can take a while to download a 'complete' **website**. I quote 'complete' bec
 
 ## MSX.org
 
-This website gives me a though time, because the way it's coded. Firts I needed to replace some URLs from **https://msx.org** and **https://www.msx.org** to something that's local on my server like **http://my-server-ip:8888**.
+This website gives me a though time, because the way it's coded. First I needed to replace some URLs from **https://msx.org** and **https://www.msx.org** to something that's local on my server like **http://my-server-ip:8888**.
 
 For this conversion I wrote a little **Perl script** called [replaceURL](https://github.com/gwendebrul/replaceURL). This does the job and now the links mostly points to my local **server**. Almost but not all, again this is the way the **website** is coded. For example photos are not correctly linked to. No matter what I try, the images doesn't show.
 
@@ -55,4 +58,4 @@ But **websites** like **Perldoc** can be used without the search functionality. 
 
 Next is to install [Kiwix](https://kiwix.org/en/) and download **stack overflow** for example and try if the search works or not. If not than I won't be getting any further into Kiwix. If the search works than I will download the other **websites** that are on my list.
 
-For now the most important **websites** for my **programming** are available on my local **server**. So when the **internet** goes down again, there are no excuses for not keep **programming** ;-)
+For now the most important **websites** for my **programming** are available on my local **server**. So when the **internet** goes down again, there are no excuses for me not to keep **programming** ;-)
