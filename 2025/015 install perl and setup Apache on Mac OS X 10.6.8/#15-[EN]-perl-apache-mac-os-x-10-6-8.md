@@ -266,6 +266,11 @@ You can now test it by going to the following URL in your browser:
 http://<ip address>/~<short user name>/cgi-bin/test.pl
 ```
 
+## YouTube video
+
+I made a YouTube video of the process [here](https://youtu.be/iQ2jpUIdBlU)
+
+
 ## Final Thoughts
 
 You now have a working **web development** environment for **HTML/CSS**, **vanilla JavaScript**, and **Perl CGI** as the **backend**.

@@ -200,6 +200,10 @@ Nu kun je testen door naar volgende **URL** te gaan in je **browser**
 
 	http://<ip address>/~<short user name>/cgi-bin/test.pl
 	
+## YouTube video
+
+Ik heb hier ook een YouTube video van gemaakt en deze vind je [hier](https://youtu.be/iQ2jpUIdBlU)
+
 ## Slotwoord
 
 Nu heb je een werkende **Webdev** **ontwikkelomgeving** voor **HTML/CSS**, **vanilla javascript** en **Perl CGI** als **backend**.
