@@ -1,3 +1,21 @@
+# Hoe ik LLMs gebruik voor webdesign en coding
+
+## Disclaimer
+
+De **AI prompts** die ik hier gebruik zijn zeer eenvoudig en enkel bedoeld om te laten zien wat je krijgt met het gebruik van eenvoudige **AI prompts**. In het kort, hoe specifieker je **AI prompt** hoe beter je resultaat gaat zijn.
+
+Voor de **coding prompts** heb ik bij een bepaald LLM de **prompt** moeten aanpassen, omdat dit niet werkte en een **context full** error gaf.
+
+## Mijn gebruik
+
+Ik gebruik **LLMs** eigenlijk als toevoeging op de gewone **documentatie** als het gaat om **coding** vragen. Als ik bijvoorbeeld moet weten hoe een **specificatie** van een functie eruit ziet. Ook als ik niet goed weet welke functie ik moet gebruiken kan ik dit snel opzoeken via **LLMs**.
+
+Als ik een **probleem** moet aanpakken maar ik weet niet goed hoe dan vraag ik een **stappenplan**. Ik vermijd het vragen van regelrechte **code**, omdat de fun in het **programmeren** bij mij zit in het oplossen van **problemen** en dit omzetten naar **programmacode**.
+
+Wat ik wel doe in mijn **IDE** is **code aanvullen**, dit besparrt tijd en als ik een functie niet zo goed vanbuiten ken ook **opzoekwerk**.
+
+In dit artikel gebruik ik 4 **LLMs** voor **code** gerelateerde vragen en **generieke** vragen (voor HTML/CSS).
+
 ## LLM used for C# docs lookup
 
 4 prompts
@@ -16,6 +34,10 @@ B2. Give me all properties for a File Object
 ## bartowski/Qwen2.5-Coder-14B-GGUF:Q4_K_M
 
 #### 1. PROMPT: "Show all methods for comparing two strings"
+
+Dit is een eenvoudige prompt die per **LLM** verschillende output heeft. Hier met dit **LLM** kom je er mee weg om niet specifiek te zijn in je vraagstelling. Kijk maar eens bij het **Deepseek-coder** model wat een betere prompt zou zijn.
+
+Hier is het resultaat voor deze **prompt** nog goed. Het is goed dat er niet alleen droge uitleg staat maar ook een voorbeeld.
 
 #### 1. ANSWER
 
@@ -63,6 +85,8 @@ These are just a few examples of the methods available for comparing two strings
 	
 #### 2. PROMPT: "Show spec of compare method you gave in the previous answer"
 
+Het resultaat van deze prompt spreekt me ook aan omdat de uitleg goed is, verschillende return waardes, en er weer een voorbeeld bij zit.
+
 #### 2. ANSWER
 
 Certainly! Here's the specification for the `Compare` method in C#:
@@ -98,6 +122,15 @@ Note: The `StringComparison` enumeration is used to specify the type of string c
 
 #### B1. PROMPT: "Give me the spec for FileObject.Copy(destination[,overwrite]) in .NET"
 
+
+Met deze **prompt** moest ik weer specifieker zijn. Merk op dat de voorbeelden niet kloppen met de functie specificatie, daar is **geen** spraken van een **source parameter**. Deze functiespecificatie is voor de **ASP** versie.
+
+Dit kan er ook ingekropen zijn doordat ik niet duidelijk was dat ik de **ASP** versie bedoelde. De functiespecificatie was dus voor een **ASP** functie en de voorbeelden zijn voor de **.NET** versie.
+
+Dit laat weer maar eens zien dat je echt wel specifieker moet zijn in je **AI prompts**. een toevoeging in de **prompt** met "ASP.NET" in plaats van ".NET" zou dit moeten opgelost hebben.
+
+Voor de rest heb ik niets te klagen, de uitleg is duidelijk, enkel de voorbeelden kloppen niet.
+
 #### B1. ANSWER
 
 Certainly! In .NET, the `FileObject.Copy` method is used to copy a file from one location to another. Here's the specification for the method:
@@ -129,6 +162,8 @@ File.Copy("source.txt", "destination.txt", false);
 In the above examples, `File.Copy` is used to copy the file `source.txt` to the specified `destination.txt` file. The `overwrite` parameter is optional and can be used to control whether the destination file should be overwritten if it already exists. If `overwrite` is not specified, the default value of `false` is used, meaning the method will throw a `IOException` if the destination file already exists.
 	
 #### B2. PROMPT "Give me all properties for a File Object"
+
+Met deze **prompt** is niets mis. Het geeft duidelijk de **.NET** versie en niet de **ASP.NET** versie. Dus hier kan je ook wat duidleijker zijn in je **prompt**. Maar op zich onthoudt De **LLM** dat ik vragen zijn stel over **.NET**.
 
 #### B2. ANSWER
 
@@ -211,6 +246,8 @@ prompt moest aangepast worden want context was vol 8192.
 
 #### 2. PROMPT: "Show spec of compare method of the string class in .NET. The method takes a parameter which controls the case-sensitivity."
 
+Dit gaat helemaal de mist in bij deze **prompt**. Het geeft helemaal niet de functiespecificatie, maar een implementatie wat ik niet gevraagd had.
+
 #### 2. ANSWER
 
 Je moet echt speciiek zijn anders krijg je geen goed antwoord.
@@ -242,6 +279,8 @@ In this example, the `IgnoreCase` parameter is set to `true`, which means the co
 	
 #### B1. PROMPT: "Give me the spec for FileObject.Copy(destination[,overwrite]) in .NET"
 
+Ook hier geeft het niet het correcte antwoord. In het voorbeeld maakt hij een "sourceFile" variabele, maar gebruikt hem dan niet.
+
 #### B1. ANSWER
 
 The `FileObject.Copy` method in .NET is used to copy a file from one location to another. It has two parameters, `destination` and `overwrite`.
@@ -262,6 +301,8 @@ This code will copy the file "source.txt" located in the "C:\\" directory to the
 
 #### B2. PROMPT: "Give me all properties for a File Object"
 
+Hier onthoudt hij wel dat het om **.NET** gaat en geeft dus de juiste **properties**. Wel een erg summiere uitleg, maar geen slechte uitleg.
+
 #### B2. ANSWER
 The `FileObject` class in .NET represents a file and provides various properties and methods for working with files. Here are some of the properties and methods provided by the `FileObject` class:
 
@@ -278,11 +319,45 @@ The `FileObject` class in .NET represents a file and provides various properties
 
 For more details, you can refer to the .NET documentation or the `FileInfo` class.
 
+## Conclusie LLMs voor C# code vragen
+
+Mijn voorkeur gaat duidelijk naar het **Qwen-code** model en niet naar de **Deepseek** versie.
+
+De **Deepseek** versie geeft voorbeelden die niet kloppen en zelfs de functiespecificatie gaat de mist in. 
+
+**Deepseek-coder** model is dus te mijden of je moet heel specifiek zijn in je **prompts**.
+
 ## LLM used for HTML/CSS
+
+3 prompts
+
+(1). Give me a color Palette that works with #fe7f2d and #233d4d (pumpkin; charcoal)
+
+(2). Assign this color palette to the following elements for a html page. 
+
+- bold text
+- regular links
+- regular links hover 
+- menu links 
+- menu links hover 
+- menu links active
+- regular text 
+- background website 
+- background categories box 
+- background recent posts box
+- italic text
+- logo text
+- footer background 
+- submit button
+
+(3). Make a wireframe for a blog html site, with categories and most viewed. It also must show recent posts
 
 ## bartowski/gemma-1.1-7b-it-GGUF:Q6_K
 
 #### 1. PROMPT: "Give me a color Palette that works with #fe7f2d and #233d4d and #233d4d"
+
+Met deze **LLM** krijg je een uitgebreid kleurenpalette met de boven vermelde **prompt**. Mijn voorkeur is echter maar 1 palette in plaats van verschillende, maar dat hangt natuurlijk van je voorkeur af.
+
 
 #### 1. ANSWER
  Color Palette suggestions:
@@ -350,6 +425,11 @@ For more details, you can refer to the .NET documentation or the `FileInfo` clas
 - footer background 
 - submit button
 
+
+Hier presteert de **LLM** niet zoals ik verwacht. Hij mixed en matched uit de verschillende kleurenpaletten, misschien had ik specifiek 1 kleurenpalette moeten vermelden, maar dan nog.
+
+Het antwoord is ook vrij summier, met het **Deepseek R1** model krijg je veel meer uitleg.
+
 #### 2. ANSWER
 
 Color Palette Assignment:
@@ -368,6 +448,8 @@ Color Palette Assignment:
 **Note:** This is just a suggested assignment. Feel free to experiment with different combinations to achieve your desired design.
 
 #### 3. PROMPT: "Make a wireframe for a blog html site, with categories and most viewed. It also must show recent posts"
+
+Dit is ook echt heel summier, maar waarschijnlijk kun je met een uitgebreidere **prompt** dit wel verbeteren. Ijk vooral eens naar de **HTML/CSS** die het maakt.
 
 #### 3. ANSWER
 
@@ -425,9 +507,13 @@ Blog HTML Site Wireframe:
 - Utilize various sizes and layouts of the elements for visual interest.
 - Ensure the website is responsive and adaptable to different devices.
 
+![HTML/CSS wireframe generated by Gemma LLM](images/html-wireframe-gemma.png)
+
 ## bartowski/DeepSeek-R1-Distill-Qwen-14B-Q4_K_M.gguf
 
 #### 1. PROMPT: "Give me a color Palette that works with #fe7f2d and #233d4d and #233d4d"
+
+Dit is nu eens een goed antwoord, 1 kleurenpalette met veel uitleg.
 
 #### 1. ANSWER
 
@@ -467,6 +553,9 @@ This palette can be used for a variety of design purposes, such as branding, web
 - logo text
 - footer background 
 - submit button
+
+Ook hier een duidelijk antwoord, maar wel al met **HTML/CSS** code die ik niet gevraagd had.
+Maar de kleur per element is wel heel duidelijk.
 
 #### 2. ANSWER
 
@@ -656,6 +745,8 @@ This code assigns the color palette to the specified elements as follows:
 You can customize this further by adjusting the colors, spacing, and other properties to match your specific design needs.
 
 #### 3. PROMPT: "Make a wireframe for a blog html site, with categories and most viewed. It also must show recent posts"
+
+Hier krijg je een beter voorbeeld dan met de **Gemma** **LLM**, het is wel nog lelijk ;-)
 
 #### 3. ANSWER
 
@@ -921,3 +1012,12 @@ The styling uses the color palette we defined earlier, with:
 You can further customize the layout, spacing, and typography to match your specific needs. The grid layouts will help make the site responsive, and the wireframe provides a good foundation for adding more content and styling.
 
 ![HTML/CSS generated by Deepseek R1 LLM](images/HTML-CSS-generated-by-deepseek-R1.png)
+
+## Conclusie LLM voor webdesign
+
+Voor **webdesign** gerelateerde vragen verkies ik het **Deepseek R1** model, omdat deze gewoonweg betere resultaten geeft dan het **Gemma** model.
+
+Uiteraard krijg je ook betere antwoorden hoe specifieker je **prompts** zijn.
+
+## Algemene conclusie
+
