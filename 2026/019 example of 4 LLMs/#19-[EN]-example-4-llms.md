@@ -1,4 +1,4 @@
-# How I use LLMs for web design and coding
+# Example 4 local LLMs
 
 ## Disclaimer
 

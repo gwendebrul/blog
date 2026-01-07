@@ -1,4 +1,4 @@
-# Hoe ik LLMs gebruik voor webdesign en coding
+# Een voorbeeld van 4 lokale LLMs
 
 ## Disclaimer
 
