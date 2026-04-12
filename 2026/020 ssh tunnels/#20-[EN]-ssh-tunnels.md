@@ -58,12 +58,12 @@ On my **iPad**, I use the **Termius** app to set up port forwarding.
 
 First, you need to create an **SSH key** and add the public key to the **authorized_keys** file on the gateway **server**. Once that’s done, you can create the connection.
 
-![Termius Key creation](images/termius-1.jpg)
-![Termius Key creation 2](images/termius-1b.jpg)
+![Termius Key creation](images/Termius-1.jpg)
+![Termius Key creation 2](images/Termius-1b.jpg)
 
 Under “Hosts,” create a connection to the gateway **server**. Fill in all the necessary details to establish an SSH connection. Instead of a password, select the **SSH key** you created. Also enter the IP address or hostname and choose SSH as the connection type.
 
-![Termius Host setup](images/termius-2.jpg)
+![Termius Host setup](images/Termius-2.jpg)
 
 Once configured, test whether you can log in to the gateway **server** via SSH from your **iPad**. If it works, you’ll see a **command prompt** from your **server**.
 
@@ -77,7 +77,7 @@ Now, you just need to configure **port forwarding** in **Termius**. Enter the co
 john@example.com:22
 ```
 
-![Termius Port Forwarding setup](images/termius-3.jpg)
+![Termius Port Forwarding setup](images/Termius-3.jpg)
 
 If everything is set correctly, click the newly created **local forwarding** entry, then open your browser and go to:
 

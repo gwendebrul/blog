@@ -47,12 +47,12 @@ Op mijn **iPad** heb ik gekozen voor de app **termius** om port forwarding te ku
 
 Als eerste moet je een **ssh key** aanmaken en de publieke sleutel op de poortwachter **server** toevoegen aan het **authorized_keys** bestand. Eens dat in orde is kun je de verbinding aanmaken.
 
-![Termius Key aanmaken](images/termius-1.jpg)
-![Termius Key aanmaken 2](images/termius-1b.jpg)
+![Termius Key aanmaken](images/Termius-1.jpg)
+![Termius Key aanmaken 2](images/Termius-1b.jpg)
 
 Bij "hosts" ga je een verbinding aanmaken met de poortwachter **server**. Hier moet je al je gegevens invullen om via **ssh** een verbinding te kunnen maken. In plaats van een paswoord kies je hier je **ssh key** die je net hebt aangemaakt. Verder vul je het IP of hostname adres in en kies je voor verbinding met **ssh**.
 
-![Termius Host aanmaken](images/termius-2.jpg)
+![Termius Host aanmaken](images/Termius-2.jpg)
 
 Als dat in orde is kun je testen of je via je **iPad** met **ssh** kunt inloggen op je poortwachter **server**. Als het werkt dan zie je een **command prompt** van je **server**.
 
@@ -61,7 +61,7 @@ Daar vul je de correcte gegevens in, als **bind address** adres vul je localhost
 
 	john@example.com:22
 	
-![Termius Port Forwarding aanmaken](images/termius-3.jpg)
+![Termius Port Forwarding aanmaken](images/Termius-3.jpg)
 	
 Als je dit allemaal correct hebt ingevuld klik je op de net aangemaakt **local forwarding** en dan ga je in je browser gewoon het volgende invullen
 
